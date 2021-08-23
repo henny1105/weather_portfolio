@@ -19,7 +19,6 @@ function callData() {
 }
 
 function createList(data) {
-
     var tit = data.main.temp - 273.15;
     $("#weather .left .temp").text(`${Math.floor(tit)}°`);
 
@@ -87,69 +86,102 @@ function createList(data) {
             .append(
                 $("<img src='img/clouds-icon.svg'>")
             )
+        $("#weather .right .bottom .pic")
+            .css({
+                backgroundImage: "url(img/img_clouds.jpg)"
+            })
     } else if (weather === "Rain") {
         $("#weather")
             .prepend(
-                $("<video src='vid/rain.mp4' autoplay loop>")
+                $("<video src='vid/rain.mp4' autoplay loop controls muted>")
             )
         $("#weather .left .img")
             .append(
                 $("<img src='img/rain-icon.svg'>")
             )
+        $("#weather .right .bottom .pic")
+            .css({
+                backgroundImage: "url(img/img_rain.jpg)"
+            })
     } else if (weather === "Clear") {
         $("#weather")
             .prepend(
-                $("<video src='vid/clear.mp4' autoplay loop>")
+                $("<video src='vid/clear.mp4' autoplay loop controls muted>")
             )
         $("#weather .left .img")
             .append(
                 $("<img src='img/sunny-icon.svg'>")
             )
+        $("#weather .right .bottom .pic")
+            .css({
+                backgroundImage: "url(img/img_clear.jpg)"
+            })
     } else if (weather === "Drizzle") {
         $("#weather")
             .prepend(
-                $("<video src='vid/drizzle.mp4' autoplay loop>")
+                $("<video src='vid/drizzle.mp4' autoplay loop controls muted>")
             )
         $("#weather .left .img")
             .append(
                 $("<img src='img/drizzle-icon.svg'>")
             )
+        $("#weather .right .bottom .pic")
+            .css({
+                backgroundImage: "url(img/img_drizzle.jpg)"
+            })
     } else if (weather === "Thunderstorm") {
         $("#weather")
             .prepend(
-                $("<video src='vid/thunderstorm.mp4' autoplay loop>")
+                $("<video src='vid/thunderstorm.mp4' autoplay loop controls muted>")
             )
         $("#weather .left .img")
             .append(
                 $("<img src='img/thunderstorm-icon.svg'>")
             )
+        $("#weather .right .bottom .pic")
+            .css({
+                backgroundImage: "url(img/img_thunderstorm.jpg)"
+            })
+
     } else if (weather === "Snow") {
         $("#weather")
             .prepend(
-                $("<video src='vid/snow.mp4' autoplay loop>")
+                $("<video src='vid/snow.mp4' autoplay loop controls muted>")
             )
         $("#weather .left .img")
             .append(
                 $("<img src='img/snow-icon.svg'>")
             )
+        $("#weather .right .bottom .pic")
+            .css({
+                backgroundImage: "url(img/img_snow.jpg)"
+            })
     } else if (weather === "Atmosphere") {
         $("#weather")
             .prepend(
-                $("<video src='vid/atmosphere.mp4' autoplay loop>")
+                $("<video src='vid/atmosphere.mp4' autoplay loop controls muted>")
             )
         $("#weather .left .img")
             .append(
                 $("<img src='img/atmosphere-icon.svg'>")
             )
+        $("#weather .right .bottom .pic")
+            .css({
+                backgroundImage: "url(img/img_atmosphere.jpg)"
+            })
     } else {
         $("#weather")
-        .prepend(
-            $("<video src='vid/mist.mp4' autoplay loop>")
-        )
-    $("#weather .left .img")
-        .append(
-            $("<img src='img/rain-icon.svg'>")
-        )
+            .prepend(
+                $("<video src='vid/mist.mp4' autoplay loop controls muted>")
+            )
+        $("#weather .left .img")
+            .append(
+                $("<img src='img/rain-icon.svg'>")
+            )
+        $("#weather .right .bottom .pic")
+            .css({
+                backgroundImage: "url(img/img_mist.jpg)"
+            })
     }
 
     console.log("현재온도 : " + (data.main.temp - 273.15));
@@ -170,7 +202,7 @@ function showTime() {
     var hours = now.getHours(); // 시간 
     var minutes = now.getMinutes(); // 분
     var seconds = now.getSeconds(); // 초
-    var week = new Array('Sunday', 'Monday', '화요일', '수요일', '목요일', '금요일', '토요일'); //주간
+    var week = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'); //주간
     var today = new Date().getDay(); // 오늘날짜
     var todayLabel = week[today];
 
