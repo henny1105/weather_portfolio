@@ -1,5 +1,5 @@
 var frame = $("#weather");
-var apiURI = "http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=84bbf1bc16c21571bb35b7478e7b2d24";
+var apiURI = "http://api.openweathermap.org/data/2.5/weather?q=london&appid=84bbf1bc16c21571bb35b7478e7b2d24";
 
 callData();
 

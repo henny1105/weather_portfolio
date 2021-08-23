@@ -19,10 +19,10 @@ var marker = new google.maps.Marker({
     map: map,
     title: markerTitle
 });
-var infowindow = new google.maps.InfoWindow({
-    content: contentString,
-    maxWizzzdth: markerMaxWidth
-});
+// var infowindow = new google.maps.InfoWindow({
+//     content: contentString,
+//     maxWizzzdth: markerMaxWidth
+// });
 google.maps.event.addListener(marker, 'click', function () {
     infowindow.open(map, marker);
 });
