@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>날씨 포트폴리오-김혜인</title>
     <link link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e2eac18c71.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/weather.js"></script>
 </head>
@@ -29,17 +30,41 @@
         </div>
         <div class="right">
             <div class="top">
-                <h2>Another location</h2>
-                <div id="map_ma"></div>
+                <div class="upcoming">
+                    <h2>Upcoming</h2>
+                    <div class="schedule">
+                        <div class="content">
+                            <i class="fas fa-calendar-check"></i>
+                            <dl>
+                                <dt>Swimming</dt>
+                                <dd>Tommorrow at 12:15 pm</dd>
+                            </dl>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-calendar"></i>
+                            <dl>
+                                <dt>Golf</dt>
+                                <dd>Sunday at 05:30 pm</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="traffic">
+                    <h2>Traffic</h2>
+                    <div class="travel_time">
+                        <div class="content">
+                            <i class="fas fa-car"></i>
+                            <dl>
+                                <dt>Lotte Tower</dt>
+                                <dd>300, Olympic-ro, Songpa-gu, Seoul, Republic of Korea</dd>
+                                <dd>45min</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="bottom">
                 <h2>Weather Details</h2>
-                <!-- <ul>
-                    <li>Weater description</li>
-                    <li>Cloudy</li>
-                    <li>Wind</li>
-                    <li>humidity</li>
-                </ul> -->
             </div>
         </div>
     </div>
