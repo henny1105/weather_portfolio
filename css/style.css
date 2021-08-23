@@ -95,11 +95,15 @@ a {
           flex-direction: row;
           justify-content: space-between; }
           #weather .right .top .upcoming .schedule .content {
+            width: 50%;
             display: flex;
             align-items: center;
             padding: 20px;
             background: rgba(0, 0, 0, 0.329);
-            border-radius: 5px; }
+            border-radius: 5px;
+            margin-right: 20px; }
+            #weather .right .top .upcoming .schedule .content:last-child {
+              margin-right: 0; }
             #weather .right .top .upcoming .schedule .content i {
               display: inline-block;
               font-size: 20px;
