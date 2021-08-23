@@ -73,8 +73,19 @@
                 font-weight: 100;
                 color: #fff;
 
-                &:nth-of-type(3) {
+                &.seconds {
                     margin-right: 20px;
+                }
+
+                &.todayLabel {
+                    margin-right: 5px;
+                }
+
+                &.todayMonths,
+                &.date {
+                    font: 25px/1 'Roboto';
+                    font-weight: 100;
+                    color: #fff;
                 }
             }
         }

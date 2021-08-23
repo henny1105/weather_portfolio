@@ -63,8 +63,14 @@ a {
         font: 30px/1 'Roboto';
         font-weight: 100;
         color: #fff; }
-        #weather .left .clock span:nth-of-type(3) {
+        #weather .left .clock span.seconds {
           margin-right: 20px; }
+        #weather .left .clock span.todayLabel {
+          margin-right: 5px; }
+        #weather .left .clock span.todayMonths, #weather .left .clock span.date {
+          font: 25px/1 'Roboto';
+          font-weight: 100;
+          color: #fff; }
   #weather .right {
     position: absolute;
     bottom: 0;

@@ -1,4 +1,3 @@
-var frame = $("#weather");
 var apiURI = "http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=84bbf1bc16c21571bb35b7478e7b2d24";
 
 callData();
@@ -184,15 +183,15 @@ function createList(data) {
             })
     }
 
-    console.log("현재온도 : " + (data.main.temp - 273.15));
-    console.log("현재습도 : " + data.main.humidity);
-    console.log("날씨 : " + data.weather[0].main);
-    console.log("상세날씨설명 : " + data.weather[0].description);
-    console.log("날씨 이미지 : " + data.weather[0].icon);
-    console.log("바람   : " + data.wind.speed);
-    console.log("나라   : " + data.sys.country);
-    console.log("도시이름  : " + data.name);
-    console.log("구름  : " + (data.clouds.all) + "%");
+    // console.log("현재온도 : " + (data.main.temp - 273.15));
+    // console.log("현재습도 : " + data.main.humidity);
+    // console.log("날씨 : " + data.weather[0].main);
+    // console.log("상세날씨설명 : " + data.weather[0].description);
+    // console.log("날씨 이미지 : " + data.weather[0].icon);
+    // console.log("바람   : " + data.wind.speed);
+    // console.log("나라   : " + data.sys.country);
+    // console.log("도시이름  : " + data.name);
+    // console.log("구름  : " + (data.clouds.all) + "%");
 }
 
 setInterval(showTime, 1000);
@@ -202,9 +201,15 @@ function showTime() {
     var hours = now.getHours(); // 시간 
     var minutes = now.getMinutes(); // 분
     var seconds = now.getSeconds(); // 초
-    var week = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'); //주간
-    var today = new Date().getDay(); // 오늘날짜
+    var date = now.getDate();
+
+    var week = new Array('Sunday,', 'Monday,', 'Tuesday,', 'Wednesday,', 'Thursday,', 'Friday,', 'Saturday,'); //주간
+    var today = new Date().getDay(); // 요일
     var todayLabel = week[today];
+
+    var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'); 
+    var today_months = new Date().getMonth(); // 월
+    var todayMonths = months[today_months];
 
     var result_hours = plusZero(hours);
     var result_minutes = plusZero(minutes);
@@ -214,7 +219,8 @@ function showTime() {
     $(".minutes").text(result_minutes + " :");
     $(".seconds").text(result_seconds);
     $(".todayLabel").text(todayLabel);
-
+    $(".todayMonths").text(todayMonths);
+    $(".date").text(date);
 }
 
 function plusZero(time) {
