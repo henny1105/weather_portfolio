@@ -1,5 +1,5 @@
 var frame = $("#weather");
-var apiURI = "http://api.openweathermap.org/data/2.5/weather?q=london&appid=84bbf1bc16c21571bb35b7478e7b2d24";
+var apiURI = "http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=84bbf1bc16c21571bb35b7478e7b2d24";
 
 callData();
 
@@ -34,9 +34,9 @@ function createList(data) {
     var imgSrc = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
     $("html컴포넌트").attr("src", imgSrc);
 
-    $("#weather .right .content")
+    $("#weather .right .bottom")
         .append(
-            $("<ul>")
+            $("<ul class='weater_details'>")
             .append(
                 $("<li>")
                 .append(
@@ -78,7 +78,7 @@ function createList(data) {
 
         $("#weather")
             .prepend(
-                $("<video src='vid/clouds.mp4' autoplay loop>")
+                $("<video src='vid/clouds.mp4' autoplay loop controls muted>")
             )
         // .css({
         //     backgroundImage: "url(img/clouds.jpg)",
